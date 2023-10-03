@@ -8,7 +8,7 @@ import {PlayButton} from '@/components/PlayButton'
 import {BackButton} from '@/components/BackButton'
 import {NextButton} from '@/components/NextButton'
 
-import data from './songlist.json'
+import data from '@/api/songlist.json'
 
 export default function Home() {
 	const [playList, setPlayList] = useState(data.songs)
@@ -77,9 +77,11 @@ export default function Home() {
 		setProgress(0)
 	}
 
+	// TODO: get random cover image for each song
+
 	return (
 		<div className='flex items-center justify-center h-screen border-2 border-b-slate-500'>
-			<div className='flex w-2/3 border-2 border-red-50 h-3/4'>
+			<div className='flex w-2/3 border-2 border-slate-100 h-3/4'>
 				<div className='flex flex-col justify-around w-4/6'>
 					<div className='flex flex-col items-center gap-8 p-12'>
 						<Image
